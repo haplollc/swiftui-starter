@@ -4,6 +4,11 @@ import PackageDescription
 let package = Package(
     name: "SwiftUIStarter",
     platforms: [.iOS(.v17)],
+    dependencies: [
+        .package(url: "https://github.com/haplollc/ThinkingOrbs", from: "1.0.0"),
+        .package(url: "https://github.com/haplollc/Minted", from: "1.0.0"),
+        .package(url: "https://github.com/haplollc/ClayGlobe", from: "1.0.0"),
+    ],
     targets: [
         .executableTarget(
             name: "SwiftUIStarter",
@@ -13,10 +18,5 @@ let package = Package(
                 .product(name: "ClayGlobe", package: "ClayGlobe"),
             ]
         )
-    ],
-    dependencies: [
-        .package(url: "https://github.com/haplollc/ThinkingOrbs", from: "1.0.0"),
-        .package(url: "https://github.com/haplollc/Minted", from: "1.0.0"),
-        .package(url: "https://github.com/haplollc/ClayGlobe", from: "1.0.0"),
     ]
 )
